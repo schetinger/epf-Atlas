@@ -6,11 +6,12 @@ from typing import List
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 
 class User:
-    def __init__(self, id, name, email, birthdate):
+    def __init__(self, id, name, email, birthdate, password):
         self.id = id
         self.name = name
         self.email = email
         self.birthdate = birthdate
+        self.password = password
 
 
     def __repr__(self):
@@ -23,7 +24,9 @@ class User:
             'id': self.id,
             'name': self.name,
             'email': self.email,
-            'birthdate': self.birthdate
+            'birthdate': self.birthdate,
+            'password': self.password
+
         }
 
 
@@ -33,7 +36,8 @@ class User:
             id=data['id'],
             name=data['name'],
             email=data['email'],
-            birthdate=data['birthdate']
+            birthdate=data['birthdate'],
+            password=data['password']
         )
 
 
@@ -63,6 +67,9 @@ class UserModel:
 
     def get_by_id(self, user_id: int):
         return next((u for u in self.users if u.id == user_id), None)
+    
+    def get_by_email(self, email: str):
+        return next((u for u in self.users if u.email == email), None)
 
 
     def add_user(self, user: User):

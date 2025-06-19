@@ -3,6 +3,7 @@
         "id": 1,
         "name": "usuario Teste",
         "email": "uduarioteste@email.com",
-        "birthdate": "1999-10-21"
+        "birthdate": "1999-10-21",
+        "password": "123456"
     }
 ]

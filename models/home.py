@@ -3,6 +3,7 @@ DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 class Home:
     def __init__(self,user):
         self.user=user
+        
     def to_dict(self):
         return{
             'user': self.user
