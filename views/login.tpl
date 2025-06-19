@@ -9,7 +9,7 @@
         
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            <input type="email" id="email" name="email" placeholder=" seuemail@exemplo.com" required>
         </div>
         
         <div class="form-group">
@@ -18,7 +18,10 @@
         </div>
         
         <div class="form-actions">
-            <button type="submit" class="btn-submit">Entrar</button>
+            <button type="submit" class="btn-submit">Logar</button>
         </div>
+        <a href="/users/create-account" class="btn-cadastro">
+    Não tem conta ainda? Cadastre-se aqui
+</a>
     </form>
 </section>
