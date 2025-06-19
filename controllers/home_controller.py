@@ -9,9 +9,9 @@ class HomeController(BaseController):
         self.home_service = HomeService()
 
     def setup_routes(self):
-        self.app.route('/home', method='GET', callback=self.list_home)
+        self.app.route('/home', method='GET', callback=self.render_home)
 
-    def list_home(self):
+    def render_home(self):
         home = self.home_service.get_all()
         return self.render('home', home=home)
     
