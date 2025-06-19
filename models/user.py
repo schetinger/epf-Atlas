@@ -75,6 +75,8 @@ class UserModel:
     def add_user(self, user: User):
         self.users.append(user)
         self._save()
+        user_folder_path = os.path.join(DATA_DIR, str(user.id))
+        os.makedirs(user_folder_path, exist_ok=True)
 
 
     def update_user(self, updated_user: User):
@@ -88,3 +90,4 @@ class UserModel:
     def delete_user(self, user_id: int):
         self.users = [u for u in self.users if u.id != user_id]
         self._save()
+        

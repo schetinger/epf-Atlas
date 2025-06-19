@@ -26,5 +26,26 @@
         "email": "rafaelschetinger1@gmail.com",
         "birthdate": "2025-06-04",
         "password": "123"
+    },
+    {
+        "id": 5,
+        "name": "oi",
+        "email": "333@333",
+        "birthdate": "2025-06-04",
+        "password": "321"
+    },
+    {
+        "id": 6,
+        "name": "oi",
+        "email": "333@333",
+        "birthdate": "2025-06-04",
+        "password": "321"
+    },
+    {
+        "id": 7,
+        "name": "oi",
+        "email": "2@2",
+        "birthdate": "2025-06-05",
+        "password": "1"
     }
 ]
