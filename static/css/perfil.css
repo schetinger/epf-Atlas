@@ -1,0 +1,56 @@
+/* --- Estilos para o Widget de Upload --- */
+.perfil {
+    position: fixed; /* Fica fixo na tela mesmo com a rolagem */
+    top: 20px;
+    left: 20px;
+    width: 320px; /* Largura do quadrado */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1010; /* Garante que ele fique por cima de outros elementos */
+    border: 1px solid #e1e1e1;
+}
+
+.perfil h4 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.upload-widget .form-group {
+    margin-bottom: 15px;
+}
+
+.upload-widget label {
+    font-size: 0.9em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.upload-widget input[type="file"] {
+    font-size: 0.8em;
+}
+
+.upload-widget .form-actions button {
+    width: 100%;
+    float: none; /* Remove o float do estilo global */
+    margin-top: 5px;
+}
+
+.upload-widget .widget-message {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.upload-widget .error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+
+.upload-widget .success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}

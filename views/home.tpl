@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+%include ('perfil')
 <head>
     <title>Home</title>
     <style>
@@ -16,6 +17,8 @@
 <body>
 
     <div class="post-box">
+
+    
         <h2>Criar Publicação</h2>
         <form action="/home/add" method="post">
             <textarea name="texto_postagem" placeholder="O que você está pensando?" required></textarea>

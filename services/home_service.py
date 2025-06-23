@@ -1,5 +1,8 @@
 from bottle import request
 from models.home import HomeModel, Home
+import os 
+
+
 
 class HomeService:
     def __init__(self):
@@ -12,3 +15,10 @@ class HomeService:
     def create_item(self, texto):
         
         self.home_model.add_item(texto)
+
+    
+        
+
+   
+   
+           
