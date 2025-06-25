@@ -23,10 +23,10 @@
             background-image: linear-gradient(
                 to top, 
                 transparent, 
-                rgba(255, 217, 0, 0.4)
+                rgba(16, 76, 106, 0.588)
             );
             width: 100%;
-            height: 500px;
+            height: 1000px;
             padding: 20px;
             border-radius: 10px;
             box-sizing: border-box; /* Garante que o padding não aumente o tamanho */
@@ -36,7 +36,7 @@
         }
     </style>
 </head>
-<body>
+<body class="fundo-amarelo-degrade">
 
     <div class="post-box">
 
