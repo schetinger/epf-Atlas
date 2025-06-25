@@ -33,7 +33,8 @@
             color: #1c1c1c;
             font-family: sans-serif;
             font-size: 1.2em;
-        }
+       }
+        </div>
     </style>
 </head>
 <body>
