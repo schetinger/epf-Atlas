@@ -23,7 +23,8 @@ class HomeController(BaseController):
     def add_item(self):
        
         texto = request.forms.get('texto_postagem')
-        self.home_service.create_item(texto)
+        avaliacao = request.forms.get('avaliacao')
+        self.home_service.create_item(texto, avaliacao)
         return redirect('/home')
         #redirect('/home')
 

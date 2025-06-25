@@ -12,9 +12,12 @@ class HomeService:
         
         return self.home_model.get_all()
 
-    def create_item(self, texto):
+    def create_item(self, texto, avaliacao):
         
-        self.home_model.add_item(texto)
+        self.home_model.add_item(texto, avaliacao)
+        
+
+    
 
     
         

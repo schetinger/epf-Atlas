@@ -8,17 +8,20 @@ DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
     #def __init__(self):
         #self.data_file = os.path.join(DATA_DIR, 'home.json')
 class Home:
-    def __init__(self, texto, id=None, criado_em=None):
+    def __init__(self, texto, avaliacao, id=None, criado_em=None):
         
         self.id = id if id is not None else int(datetime.datetime.now().timestamp() * 1000)
         self.texto = texto  
+        self.avaliacao = avaliacao 
         self.criado_em = criado_em if criado_em is not None else datetime.datetime.now().isoformat()
+        
 
     def to_dict(self):
         
         return {
             'id': self.id,
             'texto': self.texto,
+            'avaliacao': self.avaliacao,
             'criado_em': self.criado_em
         }
 
@@ -28,6 +31,7 @@ class Home:
         return cls(
             id=data.get('id'),
             texto=data.get('texto'),
+            avaliacao=data.get('avaliacao'),
             criado_em=data.get('criado_em')
         )
 
@@ -67,4 +71,5 @@ class HomeModel:
             
         novo_item = Home(texto=texto)
         self.home_items.insert(0, novo_item) 
+         
         self._save()
