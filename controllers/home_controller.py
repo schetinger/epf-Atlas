@@ -2,6 +2,7 @@ from bottle import Bottle, request, template, redirect
 from .base_controller import BaseController
 from services.home_service import HomeService
 import json
+from beaker.middleware import SessionMiddleware
 
 class HomeController(BaseController):
     def __init__(self, app):
@@ -15,10 +16,9 @@ class HomeController(BaseController):
         self.app.route('/home/add', method='POST', callback=self.add_item)
 
     def render_home(self):
-        
         items = self.home_service.get_all()
-        
-        return self.render('home', posts=items)
+        s = request.environ.get('beaker.session')
+        return self.render('home', posts=items, user_id=s.get('id'))
 
     def add_item(self):
        

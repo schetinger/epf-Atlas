@@ -16,3 +16,11 @@ class Config:
 
     # Outras configurações
     SECRET_KEY = 'sua-chave-secreta-aqui'
+    
+    SESSION_OPTS = {
+    'session.type': 'file',
+    'session.cookie_expires': 7200,
+    'session.data_dir': DATA_PATH,
+    'session.auto': True
+    }
+

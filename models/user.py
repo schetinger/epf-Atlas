@@ -70,6 +70,12 @@ class UserModel:
     
     def get_by_email(self, email: str):
         return next((u for u in self.users if u.email == email), None)
+    
+    def get_user_id(self, email):
+        user = self.get_by_email(email)
+        if user:
+            return user.id
+        return None
 
 
     def add_user(self, user: User):

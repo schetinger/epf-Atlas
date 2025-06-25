@@ -47,6 +47,8 @@
             <button type="submit">Publicar</button>
         </form>
     </div>
+    <div class="identificacao">
+        <h3>esse é seu id {{user_id}}</h3>
 
     <div class="timeline">
         <h2>Sua Timeline</h2>
