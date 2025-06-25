@@ -18,14 +18,14 @@
         "name": "fael",
         "email": "rafaelschetinger1@gmail.com",
         "birthdate": "2025-06-04",
-        "password": null
+        "password": "123"
     },
     {
         "id": 4,
         "name": "fael",
         "email": "rafaelschetinger1@gmail.com",
         "birthdate": "2025-06-04",
-        "password": "123"
+        "password": "1234"
     },
     {
         "id": 5,
