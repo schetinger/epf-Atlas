@@ -25,6 +25,7 @@ class HomeService:
                     rate = request.forms.get('rate'),
                     destination=request.forms.get('destination'))
         return post
+    
     def add_post(self, user_id):
         self.user_id = user_id
         image = request.files.get('image')          
@@ -54,7 +55,7 @@ class HomeService:
         }
 
         # 4. Usar o Model para criar o post no arquivo JSON
-        novo_post = self.post_model.add_item(novo_post)
+        novo_post = self.post_model.add_item(post_data)
         print("Dados do post salvos no JSON.")
         
         return novo_post # Retorna o objeto do post criado

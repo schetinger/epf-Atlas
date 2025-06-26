@@ -22,7 +22,7 @@ class HomeController(BaseController):
         return self.render('teste', posts=items, user_id=s.get('id'))
 
     def add_item(self):
-        #s = request.environ.get('beaker.session')
+        s = request.environ.get('beaker.session')
        # post = PostModel(s.get('id'))
         service = HomeService(s.get('id'))
        # post.add_item(service.add_post(user_id=s.get('id')))
