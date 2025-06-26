@@ -20,4 +20,12 @@
             </div>
         </form>
     </section>
+    
+</div>
+<div class="informacoes">
+    <h8>Seu email cadastrado é {{user_id}} </h8>
+
+
+
+
 </div>
