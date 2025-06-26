@@ -3,11 +3,11 @@ from .base_controller import BaseController
 from services.home_service import HomeService
 import json
 from beaker.middleware import SessionMiddleware
-
+from models.post import Post, PostModel
+s = request.environ.get('beaker.session')
 class HomeController(BaseController):
     def __init__(self, app):
         super().__init__(app)
-        self.home_service = HomeService()
         self.setup_routes()
 
     def setup_routes(self):
@@ -16,14 +16,17 @@ class HomeController(BaseController):
         self.app.route('/home/add', method='POST', callback=self.add_item)
 
     def render_home(self):
-        items = self.home_service.get_all()
         s = request.environ.get('beaker.session')
-        return self.render('home', posts=items, user_id=s.get('id'))
+        items = PostModel(s.get('id'))
+        items = items.get_all()
+        return self.render('teste', posts=items, user_id=s.get('id'))
 
     def add_item(self):
-       
-        texto = request.forms.get('texto_postagem')
-        self.home_service.create_item(texto)
+        #s = request.environ.get('beaker.session')
+       # post = PostModel(s.get('id'))
+        service = HomeService(s.get('id'))
+       # post.add_item(service.add_post(user_id=s.get('id')))
+        service.add_post(user_id=s.get('id'))
         return redirect('/home')
         #redirect('/home')
 

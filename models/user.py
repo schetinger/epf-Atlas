@@ -43,9 +43,11 @@ class User:
 
 class UserModel:
     FILE_PATH = os.path.join(DATA_DIR, 'users.json')
-
+    
     def __init__(self):
         self.users = self._load()
+    
+    
 
 
     def _load(self):
@@ -82,6 +84,9 @@ class UserModel:
         self.users.append(user)
         self._save()
         user_folder_path = os.path.join(DATA_DIR, str(user.id))
+        os.makedirs(user_folder_path, exist_ok=True)
+        POST_PATH = os.path.join(DATA_DIR, str(user.id))
+        user_folder_path = os.path.join(POST_PATH, "posts")
         os.makedirs(user_folder_path, exist_ok=True)
 
 
