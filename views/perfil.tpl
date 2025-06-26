@@ -14,6 +14,7 @@
             <div class="form-group">
                 <label for="imagem_usuario">Selecione uma imagem:</label>
                 <input type="file" id="imagem_usuario" name="imagem_usuario" required>
+                
             </div>
             <div class="form-actions">
                 <button type="submit">Enviar</button>

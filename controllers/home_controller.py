@@ -27,10 +27,18 @@ class HomeController(BaseController):
         service = HomeService(s.get('id'))
        # post.add_item(service.add_post(user_id=s.get('id')))
         service.add_post(user_id=s.get('id'))
+        
+        
+        #image_file = request.files.get('image')
+
+            
+        #service.add_post(image_file=image_file)
+        
         return redirect('/home')
         #redirect('/home')
 
-    
+
+
     def upload_foto_perfil(self):
         """Recebe o arquivo da foto, salva e retorna um JSON com o novo caminho."""
         pic_file = request.files.get('foto_perfil')

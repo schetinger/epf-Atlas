@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    %include('perfil')
 <head>
     <meta charset="UTF-8">
     <title>Diário de Viagens</title>
@@ -144,7 +145,7 @@
             % if defined('posts') and posts:
                 % for post in posts:
                     <div class="post-card">
-                        <img src="{{post.image}}" alt="Foto de {{post.destination}}">
+                        <img src="/static/posts/{{post.image}}" alt="Foto de {{post.destination}}">
                         
                         <h3>{{post.destination}}</h3>
                         

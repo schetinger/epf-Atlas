@@ -82,5 +82,12 @@
         "email": "aaa@aaa",
         "birthdate": "0111-11-11",
         "password": "1"
+    },
+    {
+        "id": 13,
+        "name": "hoi",
+        "email": "kai@gmail.com",
+        "birthdate": "2025-06-10",
+        "password": "1234"
     }
 ]

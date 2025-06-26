@@ -37,6 +37,7 @@ class HomeService:
         # Define um nome de arquivo único para evitar conflitos
         nome_unico_imagem = f"{uuid.uuid4()}{extensao}"
         caminho_para_salvar_img = os.path.join(Config.DATA_PATH, str(self.user_id), 'posts')
+        #caminho_para_html = f"image/posts/{nome_unico_imagem}"
         os.makedirs(caminho_para_salvar_img, exist_ok=True)
         caminho_completo_imagem = os.path.join(caminho_para_salvar_img, nome_unico_imagem)
         
