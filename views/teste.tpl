@@ -145,7 +145,7 @@
             % if defined('posts') and posts:
                 % for post in posts:
                     <div class="post-card">
-                        <img src="/static/posts/{{post.image}}" alt="Foto de {{post.destination}}">
+                        <img src="http://localhost:8080/static/uploads/{{post.image}}" alt="Foto de {{post.destination}}">
                         
                         <h3>{{post.destination}}</h3>
                         
