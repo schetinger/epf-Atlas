@@ -6,5 +6,13 @@
         "rate": "3",
         "destination": "a",
         "image": "C:\\Users\\arthu\\Desktop\\Projeto python\\data\\8\\posts\\addc98c8-73bc-4d6f-a9c8-f031eac9091b.png"
+    },
+    {
+        "id": "fe139f5d-6e1d-42bb-af17-c3c6fd9c2e62",
+        "user_id": 8,
+        "comment": "funciona",
+        "rate": "3",
+        "destination": "a",
+        "image": "static/users/8/posts/77574b42-7453-4445-af43-f623db3b30ef.png"
     }
 ]

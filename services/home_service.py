@@ -43,6 +43,9 @@ class HomeService:
         
         image.save(caminho_completo_imagem)
         print(f"Imagem salva em: {caminho_completo_imagem}")
+
+        caminho_url_imagem = f"static/users/{self.user_id}/posts/{nome_unico_imagem}"
+
         data = request.forms
         # 3. Preparar os dados do post para salvar no JSON
         post_data = {
@@ -52,7 +55,7 @@ class HomeService:
             "comment": data.get('comment'),
             "rate": data.get('rate'),
             "destination": data.get('destination'),
-            "image": caminho_completo_imagem # SALVAMOS O CAMINHO DA IMAGEM, e não o arquivo em si
+            "image": caminho_url_imagem # SALVAMOS O CAMINHO DA IMAGEM, e não o arquivo em si
         }
 
         # 4. Usar o Model para criar o post no arquivo JSON

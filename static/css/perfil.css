@@ -5,7 +5,7 @@
     left: 20px;
     width: 320px; /* Largura do quadrado */
     padding: 20px;
-    background-color: white;
+    background-color: #000b1c;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 1010; /* Garante que ele fique por cima de outros elementos */
@@ -54,3 +54,4 @@
     color: #4F8A10;
     background-color: #DFF2BF;
 }
+

@@ -8,10 +8,12 @@
         % if defined('success') and success:
             <p class="widget-message success">{{success}}</p>
         % end
-         <link rel="stylesheet" href="/static/css/perfil.css">
+        <link rel="stylesheet" href="/static/css/estilo_do_perfil.css">
 
         <form action="/upload_imagem" method="post" enctype="multipart/form-data">
             <div class="form-group">
+                <img src="http://localhost:8080/static/img/perfilPlaceholder.png">
+
                 <label for="imagem_usuario">Selecione uma imagem:</label>
                 <input type="file" id="imagem_usuario" name="imagem_usuario" required>
                 

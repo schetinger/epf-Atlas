@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    %include('perfil')
+    
 <head>
     <meta charset="UTF-8">
     <title>Diário de Viagens</title>
+    
     <style>
         /* Estilos gerais para a página */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f0f2f5;
-            color: #1c1e21;
+            background-color: #001331;
+            color: #ffffff;
             margin: 0;
             padding: 20px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background-color: #ffffff;
+            background-color: #000b1c;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -58,7 +59,7 @@
             color: white;
             border: none;
             padding: 10px 20px;
-            border-radius: 6px;
+            border-radius: 9999px;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
@@ -104,6 +105,7 @@
 </head>
 <body>
     <div class="container">
+        %include('perfil')
         <section class="form-section">
             <h2>Criar Novo Post de Viagem</h2>
             <form action="/home/add" method="post" enctype="multipart/form-data">
