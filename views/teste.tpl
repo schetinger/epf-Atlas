@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Diário de Viagens</title>
+
+    <link rel="stylesheet" href="/static/css/perfil.css">
     
     <style>
         /* Estilos gerais para a página */
@@ -104,8 +106,9 @@
     </style>
 </head>
 <body>
+    %include('perfil')
     <div class="container">
-        %include('perfil')
+        
         <section class="form-section">
             <h2>Criar Novo Post de Viagem</h2>
             <form action="/home/add" method="post" enctype="multipart/form-data">

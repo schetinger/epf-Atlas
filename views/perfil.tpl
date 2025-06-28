@@ -1,4 +1,4 @@
-<div class="perfil">
+<div class="perfil-widget">
     <section class="upload-section">
         <h4>Enviar Imagem de Perfil</h4>
 
@@ -8,7 +8,7 @@
         % if defined('success') and success:
             <p class="widget-message success">{{success}}</p>
         % end
-        <link rel="stylesheet" href="/static/css/estilo_do_perfil.css">
+        
 
         <form action="/upload_imagem" method="post" enctype="multipart/form-data">
             <div class="form-group">

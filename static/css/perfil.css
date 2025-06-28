@@ -1,57 +1,88 @@
+/* Arquivo: static/css/estilo_do_perfil.css */
+
 /* --- Estilos para o Widget de Upload --- */
-.perfil {
-    position: fixed; /* Fica fixo na tela mesmo com a rolagem */
-    top: 20px;
-    left: 20px;
-    width: 320px; /* Largura do quadrado */
+/* CORRIGIDO: Usando a classe .perfil-widget consistentemente */
+
+.perfil-widget {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    width: 320px;
     padding: 20px;
     background-color: #000b1c;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    z-index: 1010; /* Garante que ele fique por cima de outros elementos */
-    border: 1px solid #e1e1e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1010;
+    border: 1px solid #002b5e;
+    text-align: center; /* Centraliza todo o texto e elementos inline dentro do widget */
 }
 
-.perfil h4 {
+/* CORRIGIDO: Usando a classe mais específica .perfil-avatar */
+.perfil-widget .perfil-avatar {
+    width: 20px;          /* Ajustei o tamanho para 120px para ficar mais visível, mude se preferir */
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 10px auto 20px auto; /* Adiciona margem em cima e centraliza */
+    border: 3px solid #1877f2;
+}
+
+/* CORRIGIDO: O seletor agora usa .perfil-widget para combinar com seu HTML */
+.perfil-widget h4 {
     margin-top: 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #334e75; /* Cor da borda ajustada para o tema escuro */
     padding-bottom: 10px;
+    color: #ffffff;
 }
 
-.upload-widget .form-group {
+/* CORRIGIDO: Usando .perfil-widget */
+.perfil-widget .form-group {
     margin-bottom: 15px;
 }
 
-.upload-widget label {
+.perfil-widget label {
     font-size: 0.9em;
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
+    color: #c0c0c0;
 }
 
-.upload-widget input[type="file"] {
+.perfil-widget input[type="file"] {
     font-size: 0.8em;
-}
-
-.upload-widget .form-actions button {
+    color: #c0c0c0;
     width: 100%;
-    float: none; /* Remove o float do estilo global */
-    margin-top: 5px;
 }
 
-.upload-widget .widget-message {
+.perfil-widget .form-actions button {
+    width: 100%;
+    margin-top: 5px;
+    /* Botão já estilizado em outro lugar, pode adicionar mais estilos aqui se quiser */
+}
+
+.perfil-widget .informacoes p {
+    font-size: 0.8em;
+    color: #a0a0a0;
+    margin-top: 20px;
+}
+
+/* Estilos para as mensagens de erro/sucesso */
+.perfil-widget .widget-message {
     padding: 10px;
     border-radius: 5px;
     font-size: 0.9em;
+    margin-top: 15px;
 }
 
-.upload-widget .error {
-    color: #D8000C;
-    background-color: #FFD2D2;
+.perfil-widget .error {
+    color: #ffdddd;
+    background-color: #802424;
+    border: 1px solid #d8000c;
 }
 
-.upload-widget .success {
-    color: #4F8A10;
-    background-color: #DFF2BF;
+.perfil-widget .success {
+    color: #e6ffed;
+    background-color: #2d6b42;
+    border: 1px solid #4f8a10;
 }
-
