@@ -142,5 +142,21 @@
         "rate": "3",
         "destination": "sim",
         "image": "static/users/None/posts/01877345-0ffc-4547-8784-cf25f9975af1.png"
+    },
+    {
+        "id": "aa0c7817-5aed-4752-acad-68de4b4bc3d6",
+        "user_id": null,
+        "comment": "oi",
+        "rate": "5",
+        "destination": "sim",
+        "image": "static/users/None/posts/4f7ecf94-a999-44cf-afde-b6a609fec2fe.png"
+    },
+    {
+        "id": "777c938a-2526-416e-b96a-81a08a428fd9",
+        "user_id": null,
+        "comment": "oi",
+        "rate": "5",
+        "destination": "novo gama",
+        "image": "static/users/None/posts/23294caa-c49a-4d9f-ac67-26b369e0744d.png"
     }
 ]

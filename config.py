@@ -19,7 +19,7 @@ class Config:
     
     SESSION_OPTS = {
     'session.type': 'file',
-    'session.cookie_expires': 120,
+    'session.cookie_expires': 7200,
     'session.data_dir': DATA_PATH,
     'session.auto': True
     }

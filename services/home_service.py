@@ -4,7 +4,7 @@ from config import Config
 import uuid
 from models.post import PostModel
 import os
-
+STATIC_DIR = os.path.join(os.path.dirname(__file__), '..', 'static','uploads')
 
 
 class HomeService:
@@ -36,15 +36,12 @@ class HomeService:
         # 2. Salvar a imagem no disco
         # Define um nome de arquivo único para evitar conflitos
         nome_unico_imagem = f"{uuid.uuid4()}{extensao}"
-        caminho_para_salvar_img = os.path.join(Config.DATA_PATH, str(self.user_id), 'posts')
+        caminho_para_salvar_img = os.path.join(STATIC_DIR)
         #caminho_para_html = f"image/posts/{nome_unico_imagem}"
         os.makedirs(caminho_para_salvar_img, exist_ok=True)
         caminho_completo_imagem = os.path.join(caminho_para_salvar_img, nome_unico_imagem)
-        
         image.save(caminho_completo_imagem)
         print(f"Imagem salva em: {caminho_completo_imagem}")
-
-        caminho_url_imagem = f"static/users/{self.user_id}/posts/{nome_unico_imagem}"
 
         data = request.forms
         # 3. Preparar os dados do post para salvar no JSON
@@ -55,7 +52,7 @@ class HomeService:
             "comment": data.get('comment'),
             "rate": data.get('rate'),
             "destination": data.get('destination'),
-            "image": caminho_url_imagem # SALVAMOS O CAMINHO DA IMAGEM, e não o arquivo em si
+            "image": nome_unico_imagem # SALVAMOS O CAMINHO DA IMAGEM, e não o arquivo em si
         }
 
         # 4. Usar o Model para criar o post no arquivo JSON
