@@ -1,6 +1,8 @@
 <div class="perfil-widget">
+    
     <section class="upload-section">
         <h4>Enviar Imagem de Perfil</h4>
+        <img style="width:200px" src="http://localhost:8080/static/img/perfilPlaceholder.png">
 
         % if defined('error') and error:
             <p class="widget-message error">{{error}}</p>
@@ -12,7 +14,7 @@
 
         <form action="/upload_imagem" method="post" enctype="multipart/form-data">
             <div class="form-group">
-                <img src="http://localhost:8080/static/img/perfilPlaceholder.png">
+                <!-- img src="http://localhost:8080/static/img/perfilPlaceholder.png"-->
 
                 <label for="imagem_usuario">Selecione uma imagem:</label>
                 <input type="file" id="imagem_usuario" name="imagem_usuario" required>

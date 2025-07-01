@@ -14,5 +14,13 @@
         "rate": "3",
         "destination": "a",
         "image": "static/users/8/posts/77574b42-7453-4445-af43-f623db3b30ef.png"
+    },
+    {
+        "id": "eb6cb7d9-48a2-4c4c-ab33-3f7e946e9ccc",
+        "user_id": 8,
+        "comment": "aa",
+        "rate": "3",
+        "destination": "aa",
+        "image": "0c64534e-aaac-48da-814a-0ebdd944d498.png"
     }
 ]

@@ -2,6 +2,7 @@
 % rebase('layout', title='Login')
 
 <section class="form-section">
+     <img style="width: 350px;" src="http://localhost:8080/static/img/logo OO.png">
     
     <h1>Entrar no Sistema</h1>
 
