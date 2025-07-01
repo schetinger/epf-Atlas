@@ -1,0 +1,127 @@
+/* static/css/estilo_login.css */
+
+/* --- Estilos Gerais e Centralização --- */
+ html, body {
+    height: 100%; /* Garante que a página ocupe toda a altura da tela */
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Cor de fundo principal, um azul bem escuro */
+    background-color: #001331; 
+    
+    /* Mágica do Flexbox para centralizar o contêiner de login na tela */
+    display: flex;
+
+    flex-direction: column;
+    min-height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- O Contêiner/Caixa de Login --- */
+.login-container {
+    flex: 1;
+
+    width: 100%;
+    max-width: 400px; /* Largura máxima da caixa de login */
+    padding: 40px;
+    
+    /* Cor de fundo da caixa, um pouco mais clara que o fundo da página */
+    background-color: #000b1c; 
+    
+    border-radius: 10px;
+    border: 1px solid #002b5e; /* Borda sutil para dar definição */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+/* --- Tipografia --- */
+.login-container h1 {
+    color: #1877f2; /* Azul vibrante para o título principal */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* --- Estilos do Formulário --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #EAEAEA; /* Texto dos labels em cinza claro */
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    
+    background-color: #1c2b41; /* Fundo escuro para os campos de input */
+    border: 1px solid #334e75; /* Borda sutil para os inputs */
+    border-radius: 6px;
+    
+    color: #FFFFFF; /* Texto digitado fica branco */
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Efeito de "brilho" quando o campo de input está em foco */
+.form-group input:focus {
+    outline: none;  /*Remove a borda padrão do navegador */
+    border-color: #1877f2; /* Borda fica com o azul vibrante */
+    box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.25);
+}
+
+/* --- Botão e Links --- */
+.form-actions button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #1877f2; /* Azul vibrante */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 9999px; /* Botão em formato de pílula */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-actions button:hover {
+    background-color: #166fe5; /* Tom de azul um pouco mais escuro ao passar o mouse */
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.signup-link p {
+    color: #a0a0a0;
+}
+
+.signup-link a {
+    color: #009e86; /* Azul vibrante para o link */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000b1c; /* Cor de fundo para o rodapé */
+    color: #ffffff;
+    font-size: 14px;
+}

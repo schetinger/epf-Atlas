@@ -2,10 +2,12 @@
 % rebase('layout', title='Login')
 
 <section class="form-section">
+    
     <h1>Entrar no Sistema</h1>
 
     % # O formulário envia os dados para a rota /login com o método POST
     <form action="/login" method="post" class="form-container">
+        
         
         <div class="form-group">
             <label for="email">Email:</label>
