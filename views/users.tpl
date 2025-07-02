@@ -17,6 +17,7 @@
                     <th>Nome</th>
                     <th>Email</th>
                     <th>Data Nasc.</th>
+                    <th>Admin</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -28,6 +29,14 @@
                     <td>{{u.name}}</td>
                     <td><a href="mailto:{{u.email}}">{{u.email}}</a></td>
                     <td>{{u.birthdate}}</td>
+
+                    <td>
+                         % if u.admin:
+                             Administrador
+                         % else:
+                              Usuário
+                         % end
+                    </td>
                     
                     <td class="actions">
                         <a href="/users/edit/{{u.id}}" class="btn btn-sm btn-edit">

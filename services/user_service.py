@@ -18,8 +18,9 @@ class UserService:
         email = request.forms.get('email')
         birthdate = request.forms.get('birthdate')
         password = request.forms.get('password')
+        admin = request.forms.get('admin')
 
-        user = User(id=new_id, name=name, email=email, birthdate=birthdate, password=password)
+        user = User(id=new_id, name=name, email=email, birthdate=birthdate, password=password, admin=admin)
         self.user_model.add_user(user)
 
 
@@ -28,13 +29,15 @@ class UserService:
 
 
     def edit_user(self, user):
-        name = request.forms.get('name')
-        email = request.forms.get('email')
-        birthdate = request.forms.get('birthdate')
+        
+        user.name = request.forms.get('name')
+        user.email = request.forms.get('email')
+        user.birthdate = request.forms.get('birthdate')
+        if request.forms.get('admin') =="True":
+            user.admin = True
+        else:
+            user.admin = False
 
-        user.name = name
-        user.email = email
-        user.birthdate = birthdate
 
         self.user_model.update_user(user)
 

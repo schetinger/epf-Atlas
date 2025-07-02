@@ -1,6 +1,7 @@
 from bottle import Bottle, request
 from .base_controller import BaseController
 from services.login_service import LoginService
+from models.user import User
 
 
 class LoginController(BaseController):
@@ -25,6 +26,7 @@ class LoginController(BaseController):
                 s = request.environ.get('beaker.session')
                 s['id'] = self.login_service.get_user().id
                 s['email'] = self.login_service.get_user().email
+                s['admin'] = self.login_service.get_user().admin
                 self.redirect('/home')
             else:
                 return self.render('login', error='Usuário ou senha inválidos')

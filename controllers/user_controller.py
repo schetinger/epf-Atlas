@@ -21,7 +21,12 @@ class UserController(BaseController):
 
     def list_users(self):
         users = self.user_service.get_all()
-        return self.render('users', users=users)
+        s = request.environ.get('beaker.session')
+        if s.get('admin')==True:
+            return self.render('users', users=users)
+        else:
+             return self.redirect('/home')
+
 
 
     def add_user(self):

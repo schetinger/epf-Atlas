@@ -20,7 +20,36 @@
             <label for="birthdate">Data de Nascimento:</label>
             <input type="date" id="birthdate" name="birthdate" required 
                    value="{{user.birthdate if user else ''}}">
-        </div>
+      %if not user:
+         <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            </div>
+            %end
+
+        %if user:
+         </div class="button-group">
+           <input type="radio" id="is_admin_true" name="admin" value="True"
+           % if user.admin:
+              checked
+           % end
+             >
+          <label for="is_admin_true">Administrador</label>
+
+         <input type="radio"  id="is_admin_false" name="admin" value="False"
+           % if not user.admin:
+               checked
+           % end
+             >
+         <label for="is_admin_false">Usuário</label>
+        %else:
+            </div class="button-group">
+            <input type="radio" id="is_admin_true" name="admin" value="True">
+            <label for="is_admin_true">Administrador</label>
+
+         <input type="radio"  id="is_admin_false" name="admin" value="False" checked>
+         <label for="is_admin_false">Usuário</label>
+            %end
         
         <div class="form-actions">
             <button type="submit" class="btn-submit">Salvar</button>
