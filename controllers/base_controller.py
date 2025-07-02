@@ -1,5 +1,5 @@
 from bottle import static_file
-
+from bottle import request
 class BaseController:
     def __init__(self, app):
         self.app = app
@@ -17,8 +17,13 @@ class BaseController:
 
     
     def home_redirect(self):
-        """Redireciona a rota raiz para /users"""
-        return self.redirect('/login')
+        """Redireciona a rota raiz para /home caso esteja logado"""
+        s = request.environ.get('beaker.session')
+
+        if s.get('id')!=None:
+            return self.redirect('/home')
+        else:
+         return self.redirect('/login')
     
     def helper(self):
         return self.render('helper-final')
@@ -26,7 +31,11 @@ class BaseController:
 
     def serve_static(self, filename):
         """Serve arquivos estáticos da pasta static/"""
-        return static_file(filename, root='./static')
+        s = request.environ.get('beaker.session')
+        if s.get('id')!=None:
+            return self.redirect('/login')
+        else:
+            return static_file(filename, root='./static')
 
 
     def render(self, template, **context):

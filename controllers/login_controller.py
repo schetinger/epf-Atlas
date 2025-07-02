@@ -1,7 +1,7 @@
 from bottle import Bottle, request
 from .base_controller import BaseController
 from services.login_service import LoginService
-from beaker.middleware import SessionMiddleware
+
 
 class LoginController(BaseController):
     def __init__(self, app):
@@ -13,8 +13,12 @@ class LoginController(BaseController):
         self.app.route('/login', method=['GET','POST'], callback=self.login)
 
     def login(self):
+        s = request.environ.get('beaker.session')
         if request.method == 'GET':
-            return self.render('login')
+            if s.get('id')!=None:
+                return self.redirect('/home')
+            else:
+                return self.render('login')
         else:
             
             if self.login_service.validate_login()==True:
