@@ -7,7 +7,7 @@
         %if not image_exists:
         <img style="width:100%" src="http://localhost:8080/static/img/perfilPlaceholder.png">
         %else:
-        <img style="width:100%" src="http://localhost:8080/static/perfil/{{user_id}}.png">
+        <img style="width:100%" src="http://localhost:8080/static/perfil/{{user.image_path}}">
         %end
         <!-- 200px-->
 
@@ -30,7 +30,7 @@
     
 </div>
 <div class="informacoes">
-    <!-- Seu email cadastrado é {{user_id}}/h8 -->
+    <h8>Seu email cadastrado é {{user.id}}<h8>
 
 
 

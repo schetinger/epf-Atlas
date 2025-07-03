@@ -4,6 +4,7 @@ from services.home_service import HomeService
 import json
 from models.post import  PostModel
 from services.perfil_service import PerfilService
+from models.user import UserModel
 s = request.environ.get('beaker.session')
 class HomeController(BaseController):
     def __init__(self, app):
@@ -19,8 +20,13 @@ class HomeController(BaseController):
         s = request.environ.get('beaker.session')
         items = PostModel(s.get('id'))
         items = items.get_all()
-        image_exists = PerfilService.image_exists(f'{s.get('id')}.png')
-        return self.render('teste', posts=items, user_id=s.get('id'), image_exists=image_exists)
+        users = UserModel()
+        user = users.get_by_id(s.get('id'))
+        image_exists = PerfilService.image_exists(user.image_path)
+        if s.get('id') is None:
+            return redirect('/login')
+        else:
+         return self.render('teste', posts=items,user=user , image_exists=image_exists)
 
     def add_item(self):
         s = request.environ.get('beaker.session')
@@ -39,28 +45,19 @@ class HomeController(BaseController):
         #redirect('/home')
 
     def upload_image(self):
+        users = UserModel()
         s = request.environ.get('beaker.session')
+        user = users.get_by_id(s.get('id'))
         perfil = PerfilService()
-        perfil.add_perfil_pic(user_id=s.get('id'))
-        return redirect('/home')
+        if perfil.image_exists(user.image_path):
+            perfil.del_perfil_pic(user)
+            perfil.add_perfil_pic(user_id=s.get('id'))
+            return redirect('/home')
+        else:
+            perfil.add_perfil_pic(user_id=s.get('id'))
+            return redirect('/home')
     
-    def upload_foto_perfil(self):
-        """Recebe o arquivo da foto, salva e retorna um JSON com o novo caminho."""
-        pic_file = request.files.get('foto_perfil')
-
-        if pic_file:
-            # O service agora retorna o novo nome do arquivo
-            novo_filename = self.user_service.change_profile_picture(pic_file)
-            
-            if novo_filename:
-                # Se deu tudo certo, responde com sucesso e o novo caminho da imagem
-                return json.dumps({
-                    'success': True,
-                    'newImageUrl': f'/static/fotos_perfil/{novo_filename}'
-                })
-        
-        # Se algo deu errado (ex: nenhum arquivo enviado)
-        return json.dumps({'success': False, 'error': 'Nenhum arquivo válido enviado.'})    
+   
 
 home_routes = Bottle()
 home_controller = HomeController(home_routes)

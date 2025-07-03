@@ -1,6 +1,6 @@
 from bottle import request
 import os
-import requests
+from models.user import UserModel, User
 STATIC_DIR = os.path.join(os.path.dirname(__file__), '..', 'static','perfil')
 class   PerfilService: 
     def add_perfil_pic(self, user_id):
@@ -18,6 +18,11 @@ class   PerfilService:
         os.makedirs(caminho_para_salvar_img, exist_ok=True)
         caminho_completo_imagem = os.path.join(caminho_para_salvar_img,nome_unico_imagem)
         image.save(caminho_completo_imagem)
+       
+        usermodel = UserModel()
+        user = usermodel.get_by_id(user_id)
+        user.image_path = nome_unico_imagem
+        usermodel.update_user(user)
         print(f"Imagem salva em: {caminho_completo_imagem}")
         
     @staticmethod
@@ -26,6 +31,15 @@ class   PerfilService:
             return os.path.exists('static/perfil/' + path)
         except Exception:
             return False
+        
+    def del_perfil_pic(self,user):
+        try:
+            os.remove(os.path.join('static/perfil', user.image_path))
+        except Exception:
+            print("Erro ao excluir a imagem.")
+
+    
+
 
         
 

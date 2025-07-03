@@ -5,7 +5,8 @@
         "email": "usuarioteste@email.com",
         "birthdate": "1999-10-21",
         "password": "123456",
-        "admin": false
+        "admin": false,
+        "image_path": null
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "email": "123@123",
         "birthdate": "1999-10-21",
         "password": "1",
-        "admin": false
+        "admin": false,
+        "image_path": null
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "email": "rafaelschetinger1@gmail.com",
         "birthdate": "2025-06-04",
         "password": "123",
-        "admin": true
+        "admin": true,
+        "image_path": "3.png"
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "email": "rafaelschetinger1@gmail.com",
         "birthdate": "2025-06-04",
         "password": "1234",
-        "admin": false
+        "admin": false,
+        "image_path": null
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "email": "333@333",
         "birthdate": "2025-06-04",
         "password": "321",
-        "admin": false
+        "admin": false,
+        "image_path": null
     },
     {
         "id": 6,
@@ -45,7 +50,8 @@
         "email": "333@333",
         "birthdate": "2025-06-04",
         "password": "321",
-        "admin": false
+        "admin": false,
+        "image_path": null
     },
     {
         "id": 7,
@@ -53,7 +59,8 @@
         "email": "2@2",
         "birthdate": "2025-06-05",
         "password": "1",
-        "admin": false
+        "admin": false,
+        "image_path": null
     },
     {
         "id": 8,
@@ -61,7 +68,8 @@
         "email": "aleto@gmail.com",
         "birthdate": "2025-04-21",
         "password": "as123",
-        "admin": true
+        "admin": true,
+        "image_path": null
     },
     {
         "id": 9,
@@ -69,7 +77,8 @@
         "email": "teste@teste.com",
         "birthdate": "2025-06-11",
         "password": "123",
-        "admin": false
+        "admin": false,
+        "image_path": null
     },
     {
         "id": 10,
@@ -77,7 +86,8 @@
         "email": "aaa@aaa",
         "birthdate": "0111-11-11",
         "password": "1",
-        "admin": false
+        "admin": false,
+        "image_path": null
     },
     {
         "id": 11,
@@ -85,7 +95,8 @@
         "email": "aaa@aaa",
         "birthdate": "0111-11-11",
         "password": "1",
-        "admin": false
+        "admin": false,
+        "image_path": null
     },
     {
         "id": 12,
@@ -93,7 +104,8 @@
         "email": "aaa@aaa",
         "birthdate": "0111-11-11",
         "password": "1",
-        "admin": false
+        "admin": false,
+        "image_path": null
     },
     {
         "id": 13,
@@ -101,7 +113,8 @@
         "email": "kai@gmail.com",
         "birthdate": "2025-06-10",
         "password": "1234",
-        "admin": false
+        "admin": false,
+        "image_path": null
     },
     {
         "id": 14,
@@ -109,7 +122,8 @@
         "email": "lucas@email.com",
         "birthdate": "2000-03-25",
         "password": "123456",
-        "admin": null
+        "admin": null,
+        "image_path": null
     },
     {
         "id": 15,
@@ -117,6 +131,7 @@
         "email": "teste@lixo.auau",
         "birthdate": "2025-07-03",
         "password": "1234",
-        "admin": null
+        "admin": null,
+        "image_path": null
     }
 ]
