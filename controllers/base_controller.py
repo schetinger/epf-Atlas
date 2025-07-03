@@ -31,11 +31,7 @@ class BaseController:
 
     def serve_static(self, filename):
         """Serve arquivos estáticos da pasta static/"""
-        s = request.environ.get('beaker.session')
-        if s.get('id')!=None:
-            return self.redirect('/login')
-        else:
-            return static_file(filename, root='./static')
+        return static_file(filename, root='./static')
 
 
     def render(self, template, **context):

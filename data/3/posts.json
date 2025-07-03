@@ -54,5 +54,13 @@
         "rate": "3",
         "destination": "2",
         "image": "7ebcddcf-b970-4a51-8b8e-4d46ec2be924.png"
+    },
+    {
+        "id": "9bb65407-7334-4979-a3f1-f3e8e9a1495a",
+        "user_id": 3,
+        "comment": "foi dahora aufa",
+        "rate": "4",
+        "destination": "torre efil",
+        "image": "1df2d832-d2ca-4db6-accc-e749949b528e.png"
     }
 ]

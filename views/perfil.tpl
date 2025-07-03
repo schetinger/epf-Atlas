@@ -2,18 +2,18 @@
     
     <section class="upload-section">
         <h4>Enviar Imagem de Perfil</h4>
-        <img style="width:200px" src="http://localhost:8080/static/img/perfilPlaceholder.png">
-
-        % if defined('error') and error:
-            <p class="widget-message error">{{error}}</p>
-        % end
-        % if defined('success') and success:
-            <p class="widget-message success">{{success}}</p>
-        % end
         
+        %if not PerfilService.image_exists(f"http://localhost:8080/static/perfil/{user_id}"):
+        <img style="width:200px" src="http://localhost:8080/static/img/perfilPlaceholder.png">
+        %else:
+        <img style="width:200px" src="http://localhost:8080/static/perfil/{{user_id}}.png">
+        %end
 
-        <form action="/upload_imagem" method="post" enctype="multipart/form-data">
+       
+
+        <form action="/home/upload_imagem" method="post" enctype="multipart/form-data">
             <div class="form-group">
+             
                 <!-- img src="http://localhost:8080/static/img/perfilPlaceholder.png"-->
 
                 <label for="imagem_usuario">Selecione uma imagem:</label>

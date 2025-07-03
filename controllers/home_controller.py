@@ -3,6 +3,7 @@ from .base_controller import BaseController
 from services.home_service import HomeService
 import json
 from models.post import  PostModel
+from services.perfil_service import PerfilService
 s = request.environ.get('beaker.session')
 class HomeController(BaseController):
     def __init__(self, app):
@@ -12,12 +13,13 @@ class HomeController(BaseController):
     def setup_routes(self):
         self.app.route('/home', method='GET', callback=self.render_home)
         self.app.route('/home/add', method='POST', callback=self.add_item)
-
+        self.app.route('/home/upload_imagem', method='POST', callback=self.upload_image)
+   
     def render_home(self):
         s = request.environ.get('beaker.session')
         items = PostModel(s.get('id'))
         items = items.get_all()
-        return self.render('teste', posts=items, user_id=s.get('id'))
+        return self.render('teste', posts=items, user_id=s.get('id'),PerfilService=PerfilService)
 
     def add_item(self):
         s = request.environ.get('beaker.session')
@@ -35,8 +37,12 @@ class HomeController(BaseController):
         return redirect('/home')
         #redirect('/home')
 
-
-
+    def upload_image(self):
+        s = request.environ.get('beaker.session')
+        perfil = PerfilService()
+        perfil.add_perfil_pic(user_id=s.get('id'))
+        return redirect('/home')
+    
     def upload_foto_perfil(self):
         """Recebe o arquivo da foto, salva e retorna um JSON com o novo caminho."""
         pic_file = request.files.get('foto_perfil')

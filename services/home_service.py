@@ -33,7 +33,7 @@ class HomeService:
         if extensao.lower() not in ('.png', '.jpg', '.jpeg'):
             raise ValueError("Formato de imagem inválido. Apenas PNG ou JPG.")
 
-        # 2. Salvar a imagem no disco
+        # alvar a imagem no disco
         # Define um nome de arquivo único para evitar conflitos
         nome_unico_imagem = f"{uuid.uuid4()}{extensao}"
         caminho_para_salvar_img = os.path.join(STATIC_DIR)
