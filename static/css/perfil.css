@@ -1,13 +1,13 @@
-/* Arquivo: static/css/estilo_do_perfil.css */
 
-/* --- Estilos para o Widget de Upload --- */
-/* CORRIGIDO: Usando a classe .perfil-widget consistentemente */
+
 
 .perfil-widget {
     position: fixed;
-    top: 40px;
+    top: 20px;
     left: 40px;
-    width: 320px;
+    /*width: 320px;*/
+    max-width: 15%;
+    min-width: 15%;
     padding: 20px;
     background-color: #000b1c;
     border-radius: 10px;
@@ -15,20 +15,25 @@
     z-index: 1010;
     border: 1px solid #002b5e;
     text-align: center; /* Centraliza todo o texto e elementos inline dentro do widget */
+
+    /*display: flex;
+    flex-direction: row; ja ta herdando do body*/
 }
 
-/* CORRIGIDO: Usando a classe mais específica .perfil-avatar */
+/*  Usando a classe mais específica .perfil-avatar */
 .perfil-widget .perfil-avatar {
-    width: 20px;          /* Ajustei o tamanho para 120px para ficar mais visível, mude se preferir */
+    width: 20px;          
     height: 20px;
     border-radius: 50%;
     object-fit: cover;
-    display: block;
+
+    
+    
     margin: 10px auto 20px auto; /* Adiciona margem em cima e centraliza */
     border: 3px solid #1877f2;
 }
 
-/* CORRIGIDO: O seletor agora usa .perfil-widget para combinar com seu HTML */
+/*  O seletor agora usa .perfil-widget para combinar com seu HTML */
 .perfil-widget h4 {
     margin-top: 0;
     border-bottom: 1px solid #334e75; /* Cor da borda ajustada para o tema escuro */
@@ -36,7 +41,7 @@
     color: #ffffff;
 }
 
-/* CORRIGIDO: Usando .perfil-widget */
+/*  Usando .perfil-widget */
 .perfil-widget .form-group {
     margin-bottom: 15px;
 }

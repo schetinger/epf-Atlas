@@ -1,7 +1,4 @@
-/* static/css/estilo_login.css (VERSÃO CORRIGIDA E ORGANIZADA) */
 
-/* --- 1. Estrutura Geral da Página --- */
-/* Estas regras garantem que o rodapé fique no fundo */
 
 html {
     height: 100%;
@@ -45,7 +42,7 @@ footer {
 /* --- 2. Estilos da Caixa de Login e seu Conteúdo --- */
 
 /* A caixa de login em si */
-.login-container {
+.create-account-container {
     width: 100%;
     max-width: 420px; /* Um pouco maior para mais respiro */
     padding: 40px;
@@ -58,7 +55,7 @@ footer {
 
 
 /* Título dentro da caixa de login */
-.login-container h1 {
+.create-account-container h1 {
     color: #1877f2;
     text-align: center;
     margin-top: 0;
@@ -67,11 +64,11 @@ footer {
 }
 
 /* Grupos de formulário (label + input) */
-.login-container .form-group {
+.create-account-container .form-group {
     margin-bottom: 20px;
 }
 
-.login-container .form-group label {
+.create-account-container .form-group label {
     display: block;
     color: #EAEAEA;
     font-weight: 600;
@@ -79,7 +76,7 @@ footer {
     text-align: left;
 }
 
-.login-container .form-group input {
+.create-account-container .form-group input {
     width: 100%;
     padding: 12px;
     box-sizing: border-box;
@@ -91,14 +88,14 @@ footer {
     transition: all 0.2s ease-in-out;
 }
 
-.login-container .form-group input:focus {
+.create-account-container .form-group input:focus {
     outline: none;
     border-color: #1877f2;
     box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.25);
 }
 
-/* Botão de login */
-.login-container .form-actions button {
+/* Botão de create-account */
+.create-account-container .form-actions button {
     width: 100%;
     padding: 12px;
     border: none;
@@ -111,24 +108,7 @@ footer {
     transition: background-color 0.2s;
 }
 
-.login-container .form-actions button:hover {
+.create-account-container .form-actions button:hover {
     background-color: #166fe5;
 }
 
-/* Link de cadastro */
-.login-container .signup-link {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 14px;
-}
-
-.login-container .signup-link p {
-    color: #a0a0a0;
-    margin: 0;
-}
-
-.login-container .signup-link a {
-    color: #009e86;
-    text-decoration: none;
-    font-weight: 600;
-}

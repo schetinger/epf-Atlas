@@ -1,8 +1,12 @@
 % rebase('layout', title='Formulário Usuário')
+<img style="width: 350px;" src="http://localhost:8080/static/img/logo OO.png">
 
-<section class="form-section">
+<div class="create-account-container">
     
-    <form action="/users/create-account" method="post" class="form-container">
+
+    <h1>Crie sua Conta</h1>
+    
+    <form action="/users/create-account" method="post">
         <div class="form-group">
             <label for="name">Nome:</label>
             <input type="text" id="name" name="name" required 
@@ -21,14 +25,13 @@
                    value="{{user.birthdate if user else ''}}">
         </div>
 
-                <div class="form-group">
+        <div class="form-group">
             <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required 
-                   value="{{user.password if user else ''}}">
+            <input type="password" id="password" name="password" required>
         </div>
         
         <div class="form-actions">
-            <button type="submit" class="btn-submit">Cadastar</button>
+            <button type="submit" class="btn-submit">Cadastrar</button>
         </div>
     </form>
-</section>
+</div>

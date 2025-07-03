@@ -1,13 +1,15 @@
 <div class="perfil-widget">
     
+    
     <section class="upload-section">
         <h4>Enviar Imagem de Perfil</h4>
         
         %if not image_exists:
-        <img style="width:200px" src="http://localhost:8080/static/img/perfilPlaceholder.png">
+        <img style="width:100%" src="http://localhost:8080/static/img/perfilPlaceholder.png">
         %else:
-        <img style="width:200px" src="http://localhost:8080/static/perfil/{{user_id}}.png">
+        <img style="width:100%" src="http://localhost:8080/static/perfil/{{user_id}}.png">
         %end
+        <!-- 200px-->
 
        
 
@@ -28,7 +30,7 @@
     
 </div>
 <div class="informacoes">
-    <h8>Seu email cadastrado é {{user_id}} </h8>
+    <!-- Seu email cadastrado é {{user_id}}/h8 -->
 
 
 

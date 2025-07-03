@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Bottle - {{title or 'Sistema'}}</title>
     <link rel="stylesheet" href="/static/css/login.css" />
+    <link rel="stylesheet" href="/static/css/user_subs.css" />
     <!--link rel="icon" type="image/png" src="http://localhost:8080/static/img/icon.png" icone?-->
 
     

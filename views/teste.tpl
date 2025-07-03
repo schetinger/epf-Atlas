@@ -15,9 +15,13 @@
             color: #ffffff;
             margin: 0;
             padding: 20px;
+
+            display: flex;
+            flex-direction: row;
         }
         .container {
-            max-width: 800px;
+            max-width: 50%; /*800px*/
+            min-width: 50%;
             margin: 0 auto;
             background-color: #000b1c;
             border-radius: 8px;

@@ -1,14 +1,13 @@
 % # Este template herda de um layout base
 % rebase('layout', title='Login')
+<img style="width: 350px;" src="http://localhost:8080/static/img/logo OO.png">
 
-<section class="form-section">
-     <img style="width: 350px;" src="http://localhost:8080/static/img/logo OO.png">
+<div class="login-container">
+    
     
     <h1>Entrar no Sistema</h1>
 
-    % # O formulário envia os dados para a rota /login com o método POST
-    <form action="/login" method="post" class="form-container">
-        
+    <form action="/login" method="post">
         
         <div class="form-group">
             <label for="email">Email:</label>
@@ -23,8 +22,12 @@
         <div class="form-actions">
             <button type="submit" class="btn-submit">Logar</button>
         </div>
-        <a href="/users/create-account" class="btn-cadastro">
-    Não tem conta ainda? Cadastre-se aqui
-</a>
+
+        <div class="signup-link">
+            <a href="/users/create-account">
+                Não tem conta ainda? Cadastre-se aqui
+            </a>
+        </div>
+        
     </form>
-</section>
+</div>
