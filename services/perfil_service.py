@@ -21,12 +21,10 @@ class   PerfilService:
         print(f"Imagem salva em: {caminho_completo_imagem}")
         
     @staticmethod
-    def image_exists(url):
+    def image_exists(path):
         try:
-            response = requests.head(url, timeout=5, allow_redirects=True)
-            return response.ok
-
-        except requests.exceptions.RequestException:
+            return os.path.exists('static/perfil/' + path)
+        except Exception:
             return False
 
         

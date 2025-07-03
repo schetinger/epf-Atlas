@@ -102,5 +102,13 @@
         "birthdate": "2025-06-10",
         "password": "1234",
         "admin": false
+    },
+    {
+        "id": 14,
+        "name": "lucas teste",
+        "email": "lucas@email.com",
+        "birthdate": "2000-03-25",
+        "password": "123456",
+        "admin": null
     }
 ]

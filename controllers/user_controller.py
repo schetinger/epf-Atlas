@@ -61,7 +61,7 @@ class UserController(BaseController):
         else:
             # POST - salvar usuário
             self.user_service.save()
-            self.redirect('/home')
+            self.redirect('/login')
 
 
 user_routes = Bottle()

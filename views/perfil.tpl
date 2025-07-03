@@ -3,7 +3,7 @@
     <section class="upload-section">
         <h4>Enviar Imagem de Perfil</h4>
         
-        %if not PerfilService.image_exists(f"http://localhost:8080/static/perfil/{user_id}"):
+        %if not image_exists:
         <img style="width:200px" src="http://localhost:8080/static/img/perfilPlaceholder.png">
         %else:
         <img style="width:200px" src="http://localhost:8080/static/perfil/{{user_id}}.png">

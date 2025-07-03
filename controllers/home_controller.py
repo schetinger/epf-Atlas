@@ -19,7 +19,8 @@ class HomeController(BaseController):
         s = request.environ.get('beaker.session')
         items = PostModel(s.get('id'))
         items = items.get_all()
-        return self.render('teste', posts=items, user_id=s.get('id'),PerfilService=PerfilService)
+        image_exists = PerfilService.image_exists(f'{s.get('id')}.png')
+        return self.render('teste', posts=items, user_id=s.get('id'), image_exists=image_exists)
 
     def add_item(self):
         s = request.environ.get('beaker.session')
