@@ -15,9 +15,9 @@
             color: #ffffff;
             margin: 0;
             padding: 20px;
-
-            display: flex;
+            display: block;
             flex-direction: row;
+            gap : 10px;
         }
         .container {
             max-width: 50%; /*800px*/
@@ -41,6 +41,7 @@
         }
         .form-group {
             margin-bottom: 15px;
+            
         }
         .form-group label {
             display: block;
@@ -90,6 +91,7 @@
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
+            
         }
         .form-group button:hover {
             background-color: #166fe5;
@@ -231,5 +233,12 @@
                     <button type="submit">Logout</button>
                 </div>
             </form>
+
+    %if user.admin:
+    <form action="/users" method="get">
+        <div class="form-group">
+        <button type="submit">Gerenciar Usuários</button>
+        %end
+    </form>
 </body>
 </html>

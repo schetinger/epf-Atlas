@@ -106,6 +106,9 @@ footer {
     border-radius: 9999px;
     cursor: pointer;
     transition: background-color 0.2s;
+    flex-direction: column;
+    display: block;
+    gap : 50px;
 }
 
 .create-account-container .form-actions button:hover {

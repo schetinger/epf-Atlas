@@ -33,5 +33,11 @@
         <div class="form-actions">
             <button type="submit" class="btn-submit">Cadastrar</button>
         </div>
+        
+    </form>
+    <form action="/home" method="get">
+            <div class="form-actions">
+            <button type="submit">Ja tem conta? faça login</button>
+            </div>
     </form>
 </div>

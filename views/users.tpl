@@ -7,6 +7,9 @@
             <i class="fas fa-plus"></i> Novo Usuário
         </a>
     </div>
+    <div class="form-group">
+        <form action="/home" method="get">
+            <button type="submit">Voltar</button>
 
     <div class="table-container">
         <table class="styled-table">
@@ -38,14 +41,14 @@
                          % end
                     </td>
                     
-                    <td class="actions">
+                    <td class="actions form-group">
                         <a href="/users/edit/{{u.id}}" class="btn btn-sm btn-edit">
                             <i class="fas fa-edit"></i> Editar
                         </a>
 
                         <form action="/users/delete/{{u.id}}" method="post" 
                               onsubmit="return confirm('Tem certeza?')">
-                            <button type="submit" class="btn btn-sm btn-danger">
+                            <button type="submit" class="btn btn-sm btn-danger ">
                                 <i class="fas fa-trash-alt"></i> Excluir
                             </button>
                         </form>
