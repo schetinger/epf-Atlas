@@ -27,15 +27,6 @@
         "image_path": "3.png"
     },
     {
-        "id": 4,
-        "name": "fael",
-        "email": "rafaelschetinger1@gmail.com",
-        "birthdate": "2025-06-04",
-        "password": "1234",
-        "admin": false,
-        "image_path": null
-    },
-    {
         "id": 5,
         "name": "oi",
         "email": "333@333",

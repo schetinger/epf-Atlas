@@ -17,10 +17,9 @@ class Login:
             email=data['email'],
             password=data['password']
         )
-class LoginModel:
+class LoginModel(UserModel):
     def __init__(self):
-        user = UserModel()
-        self.users = user._load()
+        self.users = self._load()
 
     def validate_login(self,email,password):
         for user in self.users:
