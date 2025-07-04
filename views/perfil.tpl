@@ -2,7 +2,7 @@
     
     
     <section class="upload-section">
-        <h4>Enviar Imagem de Perfil</h4>
+        <h4>Perfil</h4>
         
         %if not image_exists:
         <img style="width:100%" src="http://localhost:8080/static/img/perfilPlaceholder.png">
@@ -27,7 +27,10 @@
             </div>
         </form>
         <div class="informacoes">
-            <h8>Seu email cadastrado é {{user.id}}<h8>
+            <p class="info-linha"><strong>Nome:</strong> {{user.name}}</p>
+            <p class="info-linha"><strong>Seu email cadastrado é:</strong> {{user.email}}</p>
+            <p class="info-linha"><strong>Data de nascimento:</strong> {{user.birthdate}}</p>
+            <p class="info-linha"><strong>ID:</strong> {{user.id}}</p>
 
 
 
