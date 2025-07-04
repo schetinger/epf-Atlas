@@ -67,9 +67,18 @@
 }
 
 .perfil-widget .informacoes p {
+    
     font-size: 0.8em;
     color: #a0a0a0;
     margin-top: 20px;
+}
+.perfil-widget .informacoes .info-linha {
+    font-family: 'Roboto', sans-serif;
+    
+    font-size: 1em;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* Estilos para as mensagens de erro/sucesso */
@@ -141,3 +150,7 @@
 .perfil-widget  .form-actions button:hover {
     background-color: #166fe5;
 }
+
+
+
+
