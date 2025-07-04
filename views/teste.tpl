@@ -55,10 +55,31 @@
             border: 1px solid #dddfe2;
             border-radius: 6px;
             box-sizing: border-box; /* Garante que o padding não aumente a largura */
+            
+            padding: 12px;
+            box-sizing: border-box;
+    
+            background-color: #1c2b41; /* <-- É ESTA AQUI */
+
+            border: 1px solid #334e75;
+            border-radius: 6px;
+            color: #FFFFFF; /* Define a cor do texto que você digita (branco) */
+            font-size: 16px;
+            transition: all 0.2s ease-in-out;
         }
         .form-group textarea {
             min-height: 80px;
-            resize: vertical;
+            resize: vertical; width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+    
+            background-color: #1c2b41; /* <-- É ESTA AQUI */
+
+            border: 1px solid #334e75;
+            border-radius: 6px;
+            color: #FFFFFF; /* Define a cor do texto que você digita (branco) */
+            font-size: 16px;
+            transition: all 0.2s ease-in-out;
         }
         .form-group button {
             background-color: #1877f2;
@@ -72,6 +93,19 @@
         }
         .form-group button:hover {
             background-color: #166fe5;
+        }
+        .form-group input {
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+    
+        background-color: #1c2b41; /* <-- É ESTA AQUI */
+
+        border: 1px solid #334e75;
+        border-radius: 6px;
+        color: #FFFFFF; /* Define a cor do texto que você digita (branco) */
+        font-size: 16px;
+        transition: all 0.2s ease-in-out;
         }
 
         /* Estilo para a seção do Feed */
@@ -99,14 +133,32 @@
             color: #f5c518; /* Cor de estrela */
             font-size: 18px;
             margin-bottom: 10px;
+             width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+    
+            background-color: #1c2b41; /* <-- É ESTA AQUI */
+
+            border: 1px solid #334e75;
+            border-radius: 6px;
+            color: #FFFFFF; /* Define a cor do texto que você digita (branco) */
+            font-size: 16px;
+            transition: all 0.2s ease-in-out;
         }
         .post-card .comment {
-            margin-bottom: 10px;
+            margin-bottom: 10px; width: 100%;
+            padding: 12px;
+            
+    
+            
         }
         .post-card .author {
             font-size: 12px;
             color: #65676b;
         }
+        
+       
+        
     </style>
 </head>
 <body>

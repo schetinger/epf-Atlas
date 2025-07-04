@@ -91,3 +91,50 @@
     background-color: #2d6b42;
     border: 1px solid #4f8a10;
 }
+.perfil-widget .form-group {
+    margin-bottom: 20px;
+}
+
+.perfil-widget  .form-group label {
+    display: block;
+    color: #EAEAEA;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.perfil-widget  .form-group input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #1c2b41;
+    border: 1px solid #334e75;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+.perfil-widget  .form-group input:focus {
+    outline: none;
+    border-color: #1877f2;
+    box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.25);
+}
+
+
+.perfil-widget  .form-actions button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #1877f2;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.perfil-widget  .form-actions button:hover {
+    background-color: #166fe5;
+}
