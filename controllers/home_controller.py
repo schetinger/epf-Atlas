@@ -15,17 +15,19 @@ class HomeController(BaseController):
         self.app.route('/home', method='GET', callback=self.render_home)
         self.app.route('/home/add', method='POST', callback=self.add_item)
         self.app.route('/home/upload_imagem', method='POST', callback=self.upload_image)
+        self.app.route('/home/logout', method='POST', callback=self.logout)
    
     def render_home(self):
         s = request.environ.get('beaker.session')
-        items = PostModel(s.get('id'))
-        items = items.get_all()
-        users = UserModel()
-        user = users.get_by_id(s.get('id'))
-        image_exists = PerfilService.image_exists(user.image_path)
+        
         if s.get('id') is None:
             return redirect('/login')
         else:
+         items = PostModel(s.get('id'))
+         items = items.get_all()
+         users = UserModel()
+         user = users.get_by_id(s.get('id'))
+         image_exists = PerfilService.image_exists(user.image_path)
          return self.render('teste', posts=items,user=user , image_exists=image_exists)
 
     def add_item(self):
@@ -56,6 +58,11 @@ class HomeController(BaseController):
         else:
             perfil.add_perfil_pic(user_id=s.get('id'))
             return redirect('/home')
+        
+    def logout(self):
+            s = request.environ.get('beaker.session')
+            s.delete()
+            return redirect('/login')
     
    
 

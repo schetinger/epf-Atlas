@@ -218,7 +218,7 @@
 
                         <p class="comment">{{post.comment}}</p>
 
-                        <p class="author">Postado por: Usuário #{{post.user_id}}</p>
+                        <p class="author">Postado por: {{user.name}}</p>
                     </div>
                 % end
             % else:
@@ -226,5 +226,10 @@
             % end
         </section>
     </div>
+    <form action="/home/logout" method="post">
+                  <div class="form-group">
+                    <button type="submit">Logout</button>
+                </div>
+            </form>
 </body>
 </html>

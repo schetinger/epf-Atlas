@@ -10,11 +10,8 @@ class   PerfilService:
         if extensao.lower() not in ('.png', '.jpg', '.jpeg'):
             raise ValueError("Formato de imagem inválido. Apenas PNG ou JPG.")       
 
-        # alvar a imagem no disco
-        # Define um nome de arquivo único para evitar conflitos
         nome_unico_imagem = f"{user_id}{extensao}"
         caminho_para_salvar_img = os.path.join(STATIC_DIR)
-        #caminho_para_html = f"image/posts/{nome_unico_imagem}"
         os.makedirs(caminho_para_salvar_img, exist_ok=True)
         caminho_completo_imagem = os.path.join(caminho_para_salvar_img,nome_unico_imagem)
         image.save(caminho_completo_imagem)
