@@ -33,11 +33,12 @@
         <div class="form-actions">
             <button type="submit" class="btn-submit">Cadastrar</button>
         </div>
+        <div class="signup-link">
+            <a href="/home">
+                Já tem uma conta? Faça login aqui
+            </a>
+        </div>
         
     </form>
-    <form action="/home" method="get">
-            <div class="form-actions">
-            <button type="submit">Ja tem conta? faça login</button>
-            </div>
-    </form>
+    
 </div>

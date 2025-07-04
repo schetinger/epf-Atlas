@@ -6,6 +6,7 @@
     <title>Diário de Viagens</title>
 
     <link rel="stylesheet" href="/static/css/perfil.css">
+    <link rel="stylesheet" href="/static/css/logout.css">
     
     <style>
         /* Estilos gerais para a página */
@@ -159,12 +160,15 @@
             color: #65676b;
         }
         
+        
        
         
     </style>
 </head>
 <body>
     %include('perfil')
+    
+
     <div class="container">
         
         <section class="form-section">
@@ -228,7 +232,24 @@
             % end
         </section>
     </div>
-    <form action="/home/logout" method="post">
+    <div class="logout-widget">
+        <form action="/home/logout" method="post">
+                <div class="form-group">
+                    <button type="submit">Logout</button>
+                </div>
+         </form>
+
+        %if user.admin:
+        <form action="/users" method="get">
+            <div class="form-group">
+                <button type="submit">Gerenciar Usuários</button>
+        %end
+        </form>
+    </div>
+    
+    
+    <!--tmhl do logout se der errado o outro-->
+   <!-- form action="/home/logout" method="post">
                   <div class="form-group">
                     <button type="submit">Logout</button>
                 </div>
@@ -239,6 +260,10 @@
         <div class="form-group">
         <button type="submit">Gerenciar Usuários</button>
         %end
-    </form>
+    </form -->
+
+
+
+
 </body>
 </html>

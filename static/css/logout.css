@@ -1,0 +1,58 @@
+.logout-widget {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    
+    max-width: 15%;
+    min-width: 15%;
+    padding: 20px;
+    background-color: #000b1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1010;
+    border: 1px solid #002b5e;
+    text-align: center; /* Centraliza todo o texto e elementos inline dentro do widget */
+
+    
+}
+.logout-widget .form-group {
+    margin-bottom: 15px;
+}
+.logout-widget .form-actions button {
+    width: 100%;
+    margin-top: 5px;
+    /* Botão já estilizado em outro lugar, pode adicionar mais estilos aqui se quiser */
+}
+.logout-widget .form-group {
+    margin-bottom: 20px;
+}
+.logout-widget  .form-group label {
+    display: block;
+    color: #EAEAEA;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: left;
+}
+.logout-widget  .form-group input:focus {
+    outline: none;
+    border-color: #1877f2;
+    box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.25);
+}
+.logout-widget  .form-actions button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #1877f2;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-direction: column;
+    display: block;
+    gap : 50px;
+}
+.logout-widget  .form-actions button:hover {
+    background-color: #166fe5;
+}
