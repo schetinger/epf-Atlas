@@ -26,13 +26,13 @@
                 <button type="submit">Enviar</button>
             </div>
         </form>
+        <div class="informacoes">
+            <h8>Seu email cadastrado é {{user.id}}<h8>
+
+
+
+
+        </div>
     </section>
     
-</div>
-<div class="informacoes">
-    <h8>Seu email cadastrado é {{user.id}}<h8>
-
-
-
-
 </div>
