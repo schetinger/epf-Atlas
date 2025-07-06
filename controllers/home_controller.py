@@ -35,16 +35,15 @@ class HomeController(BaseController):
        # post = PostModel(s.get('id'))
         service = HomeService(s.get('id'))
        # post.add_item(service.add_post(user_id=s.get('id')))
-        service.add_post(user_id=s.get('id'))
-        
-        
-        #image_file = request.files.get('image')
+        try:
+            service.add_post(user_id=s.get('id'))
+    
 
-            
-        #service.add_post(image_file=image_file)
-        
-        return redirect('/home')
+            return redirect('/home')
         #redirect('/home')
+        except ValueError as e:
+            
+            return redirect('/home')    
 
     def upload_image(self):
         users = UserModel()
