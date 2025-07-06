@@ -52,8 +52,12 @@ class HomeController(BaseController):
         perfil = PerfilService()
         if perfil.image_exists(user.image_path):
             perfil.del_perfil_pic(user)
-            perfil.add_perfil_pic(user_id=s.get('id'))
-            return redirect('/home')
+            try:
+                perfil.add_perfil_pic(user_id=s.get('id'))
+                return redirect('/home')
+            except ValueError as e:
+                
+                return redirect('/home')
         else:
             perfil.add_perfil_pic(user_id=s.get('id'))
             return redirect('/home')
