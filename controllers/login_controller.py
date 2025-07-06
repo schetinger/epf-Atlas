@@ -1,7 +1,7 @@
 from bottle import Bottle, request
 from .base_controller import BaseController
 from services.login_service import LoginService
-from models.user import User
+
 
 
 class LoginController(BaseController):

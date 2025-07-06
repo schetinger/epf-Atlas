@@ -1,4 +1,3 @@
-import json, os
 from models.user import UserModel
 class Login:
 

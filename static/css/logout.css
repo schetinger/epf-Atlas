@@ -11,7 +11,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 1010;
     border: 1px solid #002b5e;
-    text-align: center; /* Centraliza todo o texto e elementos inline dentro do widget */
+    text-align: center; 
 
     
 }
@@ -21,7 +21,7 @@
 .logout-widget .form-actions button {
     width: 100%;
     margin-top: 5px;
-    /* Botão já estilizado em outro lugar, pode adicionar mais estilos aqui se quiser */
+    
 }
 .logout-widget .form-group {
     margin-bottom: 20px;

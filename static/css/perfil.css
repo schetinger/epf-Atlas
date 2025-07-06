@@ -5,7 +5,6 @@
     position: fixed;
     top: 20px;
     left: 40px;
-    /*width: 320px;*/
     max-width: 15%;
     min-width: 15%;
     padding: 20px;
@@ -14,13 +13,11 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 1010;
     border: 1px solid #002b5e;
-    text-align: center; /* Centraliza todo o texto e elementos inline dentro do widget */
+    text-align: center; 
 
-    /*display: flex;
-    flex-direction: row; ja ta herdando do body*/
 }
 
-/*  Usando a classe mais específica .perfil-avatar */
+
 .perfil-widget .perfil-avatar {
     width: 20px;          
     height: 20px;
@@ -29,19 +26,19 @@
 
     
     
-    margin: 10px auto 20px auto; /* Adiciona margem em cima e centraliza */
+    margin: 10px auto 20px auto; 
     border: 3px solid #1877f2;
 }
 
-/*  O seletor agora usa .perfil-widget para combinar com seu HTML */
+
 .perfil-widget h4 {
     margin-top: 0;
-    border-bottom: 1px solid #334e75; /* Cor da borda ajustada para o tema escuro */
+    border-bottom: 1px solid #334e75; 
     padding-bottom: 10px;
     color: #ffffff;
 }
 
-/*  Usando .perfil-widget */
+
 .perfil-widget .form-group {
     margin-bottom: 15px;
 }
@@ -63,7 +60,6 @@
 .perfil-widget .form-actions button {
     width: 100%;
     margin-top: 5px;
-    /* Botão já estilizado em outro lugar, pode adicionar mais estilos aqui se quiser */
 }
 
 .perfil-widget .informacoes p {
@@ -81,7 +77,7 @@
     margin-bottom: 20px;
 }
 
-/* Estilos para as mensagens de erro/sucesso */
+
 .perfil-widget .widget-message {
     padding: 10px;
     border-radius: 5px;
