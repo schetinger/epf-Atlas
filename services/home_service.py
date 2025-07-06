@@ -28,7 +28,7 @@ class HomeService:
     def add_post(self, user_id):
         self.user_id = user_id
         image = request.files.get('image')          
-        extensao = os.path.splitext(image.filename)
+        nomeunico, extensao = os.path.splitext(image.filename)
         if extensao.lower() not in ('.png', '.jpg', '.jpeg'):
             raise ValueError("Formato de imagem inválido. Apenas PNG ou JPG.")
 

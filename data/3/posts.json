@@ -62,5 +62,21 @@
         "rate": "4",
         "destination": "torre efil",
         "image": "1df2d832-d2ca-4db6-accc-e749949b528e.png"
+    },
+    {
+        "id": "12447dd3-d081-4a76-9344-ff19aaaec508",
+        "user_id": 3,
+        "comment": "w",
+        "rate": "5",
+        "destination": "novo gama",
+        "image": "9912f324-0639-489b-8d02-8b53c715c642.jpg"
+    },
+    {
+        "id": "455fcbeb-21be-42d8-9989-9f1bf8fe121f",
+        "user_id": 3,
+        "comment": "sim",
+        "rate": "1",
+        "destination": "novo gama",
+        "image": "4c101668-0b08-42a1-8fb1-faad5885b238.jpg"
     }
 ]
