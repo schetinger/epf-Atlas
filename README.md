@@ -33,7 +33,8 @@ poo-python-bottle-template/
 Foi realizado um projeto web com base em python um *Diário de viagens* online, onde o principal objetivo é fazer publicações com foto, comentário, avalição e destino, para recordação e futuramente interação com demais usuários. Com perfil personalizável.
 
 ## 📁 Diagrama de classes 
-![image](https://github.com/user-attachments/assets/b3e1748d-31db-4ef8-a32c-cb8ee1ce9aee)
+![image](![image](https://github.com/user-attachments/assets/f9b72f06-0d73-4b78-add5-a65e0f23017b)
+)
 
 
 ## 📁 Descrição das Pastas
